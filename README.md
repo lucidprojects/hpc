@@ -1,4 +1,4 @@
-# NYU HPC
+# NYU GREENE HPC
 UPDATED to NYU's new GREENE HPC.  forked from the awesome guide [Cvalenzuela](https://github.com/cvalenzuela/hpc) put together. 
 
 A quick reference to access NYU's High Performance Computing Greene Cluster.
@@ -40,11 +40,16 @@ ssh NYUNetID@gw.hpc.nyu.edu
 Then login to the cluster:
 
 ```bash
-ssh prince.hpc.nyu.edu
+ssh greene.hpc.nyu.edu
 ```
 
 Or use NYU VPN:
 Install config instructions [here](http://www.nyu.edu/life/information-technology/getting-started/network-and-connectivity/vpn.html)
+
+Then
+```bash
+ssh NYUNetID@greene.hpc.nyu.edu
+```
 
 ## File Systems
 
