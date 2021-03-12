@@ -1,14 +1,15 @@
 # NYU HPC
+UPDATED to NYU's new GREENE HPC.  forked from the awesome guide Cvalenzuela put together.cvalenzuela/hpc 
 
-A quick reference to access NYU's High Performance Computing Prince Cluster.
+A quick reference to access NYU's High Performance Computing Greene Cluster.
 
-The official wiki is [here](https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Prince), this is an unofficial document created as a quick-start guide for first-time users with a focus in Python.
+The official wiki is [here](https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/greene), this is an unofficial document created as a quick-start guide for first-time users with a focus in Python.
 
 ## Get an account
 
 You need to be affiliated to NYU and have a sponsor. 
 
-To get an account approved, follow [this steps.](https://wikis.nyu.edu/display/NYUHPC/Requesting+an+HPC+account+with+IIQ)
+To get an account approved, ask a professor for sponsorship and complete this [form.](https://docs.google.com/forms/d/e/1FAIpQLSejXQemyQij389ipNdhFCQ-PD8AjSa_B6mhdQudB6DCdPejbw/viewform) It requires their name and/or NetID
 
 ## Log in
 
@@ -17,7 +18,7 @@ Once you have been approved, you can access HPC from:
  1. Within the NYU network:
 
 ```bash
-ssh NYUNetID@prince.hpc.nyu.edu
+ssh NYUNetID@2@greene.hpc.nyu.edu
 ```
 
 Once logged in, the root should be:
@@ -41,6 +42,9 @@ Then login to the cluster:
 ```bash
 ssh prince.hpc.nyu.edu
 ```
+
+Or use NYU VPN:
+Install config instructions [here](http://www.nyu.edu/life/information-technology/getting-started/network-and-connectivity/vpn.html)
 
 ## File Systems
 
