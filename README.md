@@ -1,5 +1,5 @@
 # NYU HPC
-UPDATED to NYU's new GREENE HPC.  forked from the awesome guide Cvalenzuela put together.cvalenzuela/hpc 
+UPDATED to NYU's new GREENE HPC.  forked from the awesome guide [Cvalenzuela](https://github.com/cvalenzuela/hpc) put together. 
 
 A quick reference to access NYU's High Performance Computing Greene Cluster.
 
