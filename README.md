@@ -161,6 +161,11 @@ $pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f ht
 $pip install ninja opensimplex
 ```
 
+We also need tensorboard which is not included above
+```bash
+conda install -c conda-forge tensorboard 
+```
+
 check version
 ```bash
 $pip show torch
@@ -259,7 +264,7 @@ module purge
 cd /home/[NetID]/stylegan2-ada-pytorch/
 
 singularity exec --nv \
-	--overlay /home/[NetID]/torchenv/pytorch1.8.0-cuda11.0.ext3 \
+	--overlay /home/[NetID]/torchenv/pytorch1.8.0-cuda11.0.ext3:ro \
         /scratch/work/public/singularity/cuda11.0-cudnn8-devel-ubuntu18.04.sif \
         bash -c "source /ext3/env.sh; \
         python train.py --gpus=4 --cfg=11gb-gpu --metrics=None --outdir=/scratch/[NetID]/results \
