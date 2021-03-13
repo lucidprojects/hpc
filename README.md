@@ -67,7 +67,7 @@ Scratch is a file system mounted on Prince that is connected to the compute node
 
 Greene HPC setup notes
 
-##Configure [Singularity](https://sylabs.io/guides/3.7/user-guide/) Container and environment
+## Configure [Singularity](https://sylabs.io/guides/3.7/user-guide/) Container and environment
 
 This process is the replacement for loading modules that was used on Prince.
 
