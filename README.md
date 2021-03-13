@@ -259,16 +259,13 @@ module purge
 cd /home/[NetID]/stylegan2-ada-pytorch/
 
 singularity exec --nv \
-	     --overlay /home/[NetID]/torchenv/pytorch1.8.0-cuda11.0.ext3 \
-	    /scratch/work/public/singularity/cuda11.0-cudnn8-devel-ubuntu18.04.sif \
-	    bash -c "source /ext3/env.sh; \
-        --overlay /home/[NetID]/torchenv/pytorch1.8.0-cuda11.0.ext3 \
+	--overlay /home/[NetID]/torchenv/pytorch1.8.0-cuda11.0.ext3 \
         /scratch/work/public/singularity/cuda11.0-cudnn8-devel-ubuntu18.04.sif \
         bash -c "source /ext3/env.sh; \
         python train.py --gpus=4 --cfg=11gb-gpu --metrics=None --outdir=/scratch/[NetID]/results \
         --data=/scratch/[NetID]/datasets/[dataset.zip] --snap=4 --resume=/scratch/[NetID]/pretrained/[pretrianed or resume].pkl \
         --augpipe=bg --initstrength=0.0 --gamma=50.0 \
-        --mirror=True --mirrory=False --nkimg=0 
+        --mirror=True --mirrory=False --nkimg=0"
         
 ```
         
@@ -314,7 +311,9 @@ squeue -j [JOB_ID] -o "%.18i %.9P %.8j %.8u %.8T %.10M %.9l %.6D %R %m"
            3687633 rtx8000,v desert10   [NetID]  PENDING       0:00 2-00:00:00      1 (Resources) 200G
 ```           
 See full sbatch queue
-           
+```bash
+$sprio
+```
 
 
 ## Loading Modules
