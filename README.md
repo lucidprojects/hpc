@@ -227,7 +227,7 @@ module purge
 if [[ "$(hostname -s)" =~ ^g[r,v] ]]; then nv="--nv"; fi
 
 singularity exec $nv \
-	    --overlay /home/[NetID]/[DIRNAME]/pytorch1.8.0-cuda11.0.ext3 \
+	    --overlay /home/[NetID]/[DIRNAME]/pytorch1.8.0-cuda11.0.ext3:ro \
 	    /scratch/work/public/singularity/cuda11.0-cudnn8-devel-ubuntu18.04.sif \
 	    /bin/bash
 ```
