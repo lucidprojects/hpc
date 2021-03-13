@@ -227,7 +227,7 @@ module purge
 if [[ "$(hostname -s)" =~ ^g[r,v] ]]; then nv="--nv"; fi
 
 singularity exec $nv \
-	    --overlay /home/[NetID]/torchenv/pytorch1.8.0-cuda11.0.ext3 \
+	    --overlay /home/[NetID]/[DIRNAME]/pytorch1.8.0-cuda11.0.ext3 \
 	    /scratch/work/public/singularity/cuda11.0-cudnn8-devel-ubuntu18.04.sif \
 	    /bin/bash
 ```
@@ -264,7 +264,7 @@ module purge
 cd /home/[NetID]/stylegan2-ada-pytorch/
 
 singularity exec --nv \
-	--overlay /home/[NetID]/torchenv/pytorch1.8.0-cuda11.0.ext3:ro \
+	--overlay /home/[NetID]/[DIRNAME]/pytorch1.8.0-cuda11.0.ext3:ro \
         /scratch/work/public/singularity/cuda11.0-cudnn8-devel-ubuntu18.04.sif \
         bash -c "source /ext3/env.sh; \
         python train.py --gpus=4 --cfg=11gb-gpu --metrics=None --outdir=/scratch/[NetID]/results \
