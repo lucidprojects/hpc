@@ -242,7 +242,7 @@ Adjust train.py args as desired
 *note :ro after overlay makes it "read only" so we can still open the singularity container and use it for other jobs. :rw (default) would lock the file for use
 
 ```bash
-$nano [my_job].sbatch
+$nano [jobname].sbatch
 ```
 
 ```bash
@@ -318,7 +318,7 @@ more details
 ```bash
 squeue -j [JOB_ID] -o "%.18i %.9P %.8j %.8u %.8T %.10M %.9l %.6D %R %m"
              JOBID PARTITION     NAME     USER    STATE       TIME TIME_LIMI  NODES NODELIST(REASON) MIN_MEMORY
-           3687633 rtx8000,v desert10   [NetID]  PENDING       0:00 2-00:00:00      1 (Resources) 200G
+           3687633 rtx8000,v [jobname]   [NetID]  PENDING       0:00 2-00:00:00      1 (Resources) 200G
 ```           
 See full sbatch queue
 ```bash
