@@ -328,7 +328,7 @@ $sprio
 
 ## Loading Modules
 
-### This portion has mostly been replaced by the Singularity setup above.  Leaving it incase there is a uscase for module, e.g. rclone mentioned above.
+### This portion has mostly been replaced by the Singularity setup above.  Leaving it incase there is a usecase for modules, e.g. rclone mentioned above.
 
 Slurm allows you to load and manage multiple versions and configurations of software packages.
 
