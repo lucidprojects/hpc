@@ -55,7 +55,7 @@ ssh NYUNetID@greene.hpc.nyu.edu
 
 You can get acces to three filesystems: `/home`, `/scratch`, and `/archive`.
 
-Scratch is a file system mounted on Prince that is connected to the compute nodes where we can upload files faster. Notice that the content gets periodically flushed.
+Scratch is a file system mounted on Greene that is connected to the compute nodes where we can upload files faster. Notice that the content gets periodically flushed.
 
 ```bash
 [NYUNetID@log-0 ~]$ cd /scratch/NYUNetID
@@ -276,8 +276,7 @@ singularity exec --nv \
         
 Transfer dataset and files to Greene
 
-rclone 
-rclone with module rclone/1.53.3
+Rclone with module rclone/1.53.3
 
 ```bash
 $ module avail
@@ -288,10 +287,16 @@ $ module load rclone/1.53.3
 
 or
 
-SCP
+SCP 
+to Greene
 ```bash
-scp [pretrianed].pkl [NetID]@gdtn.hpc.nyu.edu:/scratch/[NetID]/pretrained/
-scp [dataset].pkl [NetID]@gdtn.hpc.nyu.edu:/scratch/[NetID]/datasets/
+scp [pretrianed].pkl [NetID]@gdtn.hpc.nyu.edu:/scratch/[NetID]/pretrained/ .
+scp [dataset].zip [NetID]@gdtn.hpc.nyu.edu:/scratch/[NetID]/datasets/ .
+```
+
+from Greene
+```bash
+scp [NetID]@gdtn.hpc.nyu.edu:/scratch/[NetID]/[PATH_TTO_FILE] .
 ```
 
 Helpful cmds
@@ -322,6 +327,8 @@ $sprio
 
 
 ## Loading Modules
+
+#This portion has mostly been replaced by the Singularity setup above.  Leaving it incase there is a uscase for module, e.g. rclone mentioned above.
 
 Slurm allows you to load and manage multiple versions and configurations of software packages.
 
