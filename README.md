@@ -324,6 +324,29 @@ $sprio
 ```
 
 
+detailed information for a job:
+```bash
+scontrol show jobid -dd <jobid>
+```
+
+show status of a currently running job
+(see 'man sstat' for other available JOB STATUS FIELDS)
+```bash
+sstat --format=TresUsageInMax%80,TresUsageInMaxNode%80 -j <JobID> --allsteps
+```
+
+get stats for completed jobs 
+(see 'man sacct' for other JOB ACCOUNTING FIELDS)
+```bash
+sacct -j <jobid> --format=JobID,JobName,MaxRSS,Elapsed
+```
+the same information for all jobs of a user:
+```bash
+sacct -u <username> --format=JobID,JobName,MaxRSS,Elapsed 
+```
+
+More info on [SLURM best practices](https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/slurm-best-practices#TOC-Important:-check-if-you-are-wasting-RAM-and-CPU-)
+
 ## Loading Modules
 
 ### This portion has mostly been replaced by the Singularity setup above.  Leaving it incase there is a usecase for modules, e.g. rclone mentioned above.
