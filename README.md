@@ -314,10 +314,15 @@ $squeue -u [NetID]
 ```
 more details
 ```bash
-squeue -j [JOB_ID] -o "%.18i %.9P %.8j %.8u %.8T %.10M %.9l %.6D %R %m"
+$squeue -j [JOB_ID] -o "%.18i %.9P %.8j %.8u %.8T %.10M %.9l %.6D %R %m"
              JOBID PARTITION     NAME     USER    STATE       TIME TIME_LIMI  NODES NODELIST(REASON) MIN_MEMORY
            3687633 rtx8000,v [jobname]   [NetID]  PENDING       0:00 2-00:00:00      1 (Resources) 200G
-```           
+``` 
+
+full detials
+```
+$scontrol show jobid -dd [JOB_ID]
+```
 See full sbatch queue
 ```bash
 $sprio
